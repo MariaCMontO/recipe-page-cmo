@@ -1,0 +1,166 @@
+:root {
+    --White: hsl(0, 0%, 100%);
+    --Stone-100: hsl(30, 54%, 90%);
+    --Stone-150: hsl(30, 18%, 87%);
+    --Stone-600: hsl(30, 10%, 34%);
+    --Stone-900: hsl(24, 5%, 18%);
+    --Brown-800: hsl(14, 45%, 36%);
+    --Rose-800: hsl(332, 51%, 32%);
+    --Rose-50: hsl(330, 100%, 98%);
+    --font-principal: "Young Serif", serif;
+    --font-secundary: "Outfit", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--Stone-100);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-secundary);
+    font-size: 1.6rem;
+    color: var(--Stone-600);
+    font-weight: 400;
+}
+
+h2 {
+    font-family: var(--font-principal);
+    color: var(--Brown-800);
+    font-weight: 400;
+}
+
+article {
+    background-color: var(--White);
+    border-radius: 2rem;
+    width: 73.6rem;
+    height: 170.8rem;
+    margin: 12.4rem 0;
+    padding: 4rem;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li::before {
+    content: "•";
+    font-size: 1.7rem;
+    margin-right: 2rem;
+}
+
+ul li:not(:last-child),
+ol li:not(:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+ol {
+    list-style: none;
+    counter-reset: contador;
+    line-height: 2.2rem;
+}
+
+ol li{
+    counter-increment: contador;
+    padding-left: 3rem;
+    position: relative;
+}
+
+ol li::before {
+    content: counter(contador) ". ";
+    margin-right: 2rem;
+    color: var(--Brown-800);
+    font-weight: 700;
+    left: 0;
+    position: absolute;
+}
+
+hr {
+    border: 0.01rem solid var(--Stone-150);
+}
+
+span {
+    font-weight: 600;
+}
+
+.title-container img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.title-container h1 {
+    font-size: 2.5rem;
+    font-family: var(--font-principal);
+    color: var(--Stone-900);
+    margin-top: 4rem;
+    font-weight: 400;
+}
+
+.title-container p {
+    margin-top: 2rem;
+    color: var(--Stone-600);
+}
+
+.rose-container {
+    background-color: var(--Rose-50);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+.rose-container p {
+    color: var(--Rose-800);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.rose-container ul li::before {
+    color: var(--Rose-800);
+}
+
+.container {
+    margin-top: 3rem;
+}
+
+.container ul, ol {
+    margin-top: 2.6rem;
+    margin-bottom: 2.5rem;
+}
+
+.container ul li::before {
+    color: var(--Brown-800);
+}
+
+.container p{
+margin-top: 1.7rem;
+margin-bottom: 1.8rem;
+}
+
+table{
+    padding: 3rem;
+    border-collapse: collapse;
+}
+
+table td{
+    width: 35rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
+.col{
+    color: var(--Brown-800);
+    font-weight: 600;
+}
+
+tr:not(:last-child){
+    border-bottom: 0.01rem solid var(--Stone-150);
+}
